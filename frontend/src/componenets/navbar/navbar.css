@@ -1,0 +1,127 @@
+:root {
+	--primary-color: #008cef;
+	--secondary-color: #5ab7ff;
+	--background-color: #ffffff;
+	--navbar-color: #ffffff;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	background-color: var(--background-color);
+}
+
+.nav-container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 5px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+.wrapper-nav {
+	margin-bottom: 60px;
+}
+
+.navbar {
+	height: 60px;
+	background-color: var(--navbar-color);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	border-bottom: 1px solid var(--secondary-color);
+	margin-bottom: 60px;
+}
+
+.logo {
+	font-size: 30px;
+}
+.logo-img {
+	width: 150px;
+	height: auto;
+	mix-blend-mode: multiply;
+}
+
+.menu-icon {
+	display: none;
+}
+
+.nav-elements ul {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+	margin-right: 60px;
+	margin-left: 10px;
+}
+
+.nav-elements ul a {
+	font-size: 18px;
+	font-weight: 500;
+	text-decoration: none;
+	color: black;
+}
+.nav-elements ul a:hover {
+	font-size: 18px;
+	font-weight: 500;
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+.cta-button {
+	background-color: var(--secondary-color);
+	color: #fff !important;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.cta-button:hover {
+	background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+	.nav-elements ul li:not(:last-child) {
+		margin-right: 30px;
+	}
+}
+
+@media (max-width: 600px) {
+	.menu-icon {
+		display: block;
+		cursor: pointer;
+		font-size: 24px;
+	}
+
+	.nav-elements {
+		position: absolute;
+		right: 0;
+		top: 60px;
+		background-color: var(--navbar-color);
+		width: 0px;
+		height: calc(100vh - 60px);
+		transition: all 0.3s ease-in;
+		overflow: hidden;
+		z-index: 1000;
+	}
+
+	.nav-elements.active {
+		width: 270px;
+	}
+
+	.nav-elements ul {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.nav-elements ul li {
+		margin-right: unset;
+		margin-top: 22px;
+	}
+}

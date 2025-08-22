@@ -1,0 +1,49 @@
+:root {
+	--primary-color: #008cef;
+	--secondary-color: #5ab7ff;
+
+	--background-color: #ffffff;
+}
+.accordion {
+	border: 1px solid #91cfff;
+	margin-bottom: 10px;
+}
+
+.accordion-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	cursor: pointer;
+	background-color: #c1e4ff;
+}
+
+.accordion-header.active {
+	background-color: var(--secondary-color);
+}
+
+.accordion-title {
+	flex-grow: 1;
+	margin-right: 10px;
+}
+
+.accordion-icon {
+	font-size: 20px;
+}
+
+.accordion-content {
+	padding: 10px;
+	border-top: 1px solid #91cfff;
+}
+
+.allAccordions {
+	width: 80%;
+	margin: 30px auto;
+}
+.accordion-heading {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	color: var(--primary-color);
+	text-align: center;
+	font-size: 30px;
+}

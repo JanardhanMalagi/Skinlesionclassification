@@ -1,0 +1,73 @@
+:root {
+	--primary-color: #008cef;
+	--secondary-color: #43b1c4;
+	--background-color: #ffffff;
+	--navbar-color: #ffffff;
+}
+.feature-section {
+	display: grid;
+	grid-template-columns: repeat(2, 400px); /* Two columns */
+	gap: 80px;
+	justify-content: center;
+	padding: 20px;
+	margin-top: 30px;
+}
+
+.feature {
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #ffffff;
+	box-shadow: #008cef 0px 0px 10px;
+	text-align: center;
+	transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+.seconadry-heading {
+	font-size: 36px;
+	margin-top: 40px;
+	color: var(--primary-color);
+	text-align: center;
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	color: #ffffff;
+	margin: 0 auto 10px; /* Center the icon vertically */
+	background-color: var(--primary-color); /* Background color for icons */
+	transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+.feature:hover {
+	box-shadow: 0px 0px 20px rgba(0, 140, 239, 0.7); /* Glow effect on hover for feature */
+}
+@media (max-width: 768px) {
+	.feature-section {
+		grid-template-columns: repeat(1, 300px);
+		justify-content: center;
+		padding: 20px;
+		gap: 40px;
+	}
+	.seconadry-heading {
+		font-size: 30px;
+		margin-bottom: -20px;
+	}
+	.feature {
+		padding: 20px;
+		border-radius: 10px;
+		background-color: #ffffff;
+		box-shadow: #008cef 0px 0px 10px;
+		text-align: center;
+		transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+	}
+
+	.icon {
+		font-size: 20px;
+		width: 40px;
+		height: 40px;
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"name": "Derm Detect",
+	"short_name": "Derm Detect",
+	"theme_color": "#2196f3",
+	"background_color": "#fff",
+	"display": "standalone",
+	"scope": "/",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "./maskable.png",
+			"sizes": "196x196",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "./logo-192x192.png",
+			"size": "192X192",
+			"type": "image/png"
+		},
+		{
+			"src": "./logo-256x256.png",
+			"size": "256X256",
+			"type": "image/png"
+		},
+		{
+			"src": "./logo-384x384.png",
+			"size": "384X384",
+			"type": "image/png"
+		},
+		{
+			"src": "./logo-512x512.png",
+			"size": "512X512",
+			"type": "image/png"
+		}
+	]
+}

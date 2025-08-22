@@ -1,0 +1,131 @@
+/* Normal CSS */
+.hero-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 50px;
+	height: 80vh;
+}
+.svg-bg {
+	z-index: -1;
+}
+
+.left-section {
+	flex: 1;
+	margin-right: 20px;
+}
+
+.right-section {
+	flex: 2;
+}
+
+.hero-image {
+	width: 700px;
+	height: auto;
+}
+
+.title {
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+}
+
+.description {
+	font-size: 1.2rem;
+	margin-bottom: 45px;
+}
+
+.cta-button {
+	padding: 10px 20px;
+	font-size: 1.2rem;
+	border: none;
+	background-color: #ffffff; /* Navbar color */
+	color: #008cef; /* Primary color */
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+	background-color: #43b1c4; /* Secondary color */
+}
+
+.learn-more {
+	padding: 10px 20px;
+	font-size: 1.2rem;
+	border: none;
+	background-color: #fff; /* Navbar color */
+	color: #008cef; /* Primary color */
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-left: 30px;
+}
+/* added */
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+.moving-border {
+	width: 200px;
+	height: 300px;
+	position: relative;
+	background: #111;
+	padding: 4px;
+}
+.moving-border::before,
+.moving-border::after {
+	content: "";
+	position: absolute;
+	inset: -0.2rem;
+	z-index: -1;
+	background: linear-gradient(var(--angle), #fd3f3f, #ec24fe, #2afe5c);
+	animation: rotate 2s linear infinite;
+	border-radius: 10px;
+}
+.moving-border::after {
+	filter: blur(10px);
+}
+@keyframes rotate {
+	0% {
+		--angle: 0deg;
+	}
+	100% {
+		--angle: 360deg;
+	}
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+	.hero-container {
+		flex-direction: column;
+		text-align: center;
+		padding: 30px;
+		height: auto;
+	}
+
+	.hero-image {
+		margin-bottom: 20px;
+		width: 300px;
+		height: auto;
+	}
+	.title {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-container {
+		padding: 20px;
+	}
+	.learn-more {
+		margin-left: 10px;
+		font-size: 1rem;
+		padding: 8px 16px;
+	}
+	.cta-button {
+		font-size: 1rem;
+		padding: 8px 16px;
+	}
+}

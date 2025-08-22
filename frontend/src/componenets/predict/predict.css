@@ -1,0 +1,132 @@
+:root {
+	--primary-color: #008cef;
+	--secondary-color: #43b1c4;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	padding: 3rem 3rem;
+}
+
+.skin-lesion-detection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: #f8f8f8;
+	box-shadow: #77cbff 0px 0px 20px;
+	margin-bottom: 2rem;
+}
+
+label {
+	display: inline-block;
+	background-color: var(--primary-color);
+	color: white;
+	padding: 1rem 2rem;
+	font-family: sans-serif;
+	font-size: 1.5rem;
+	border-radius: 10rem;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+p {
+	font-size: 1rem;
+	color: #333;
+	margin-top: 1rem;
+}
+button {
+	display: inline-block;
+	border: 2px solid var(--primary-color);
+	background-color: var(--primary-color);
+	color: white;
+	padding: 0.7rem 1rem;
+	font-family: sans-serif;
+	font-size: 1rem;
+	border-radius: 10rem;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+/* added */
+.image-preview {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.image-preview img {
+	max-width: 100%;
+	max-height: 300px; /* Adjust as needed */
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.drag-drop-zone {
+	padding: 8rem;
+}
+
+.clear-button {
+	display: inline-block;
+	border: 2px solid #ff2121;
+	background-color: #ff2121;
+	color: white;
+	padding: 0.7rem 1rem;
+	font-family: sans-serif;
+	font-size: 1rem;
+	border-radius: 10rem;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+.disabled {
+	cursor: not-allowed;
+	border: 2px solid #999;
+	background-color: #999;
+}
+
+@media screen and (max-width: 768px) {
+	.form {
+		margin: 0 auto;
+		padding: 0rem;
+	}
+
+	.skin-lesion-detection {
+		margin: 0 auto;
+		padding: 0;
+		box-shadow: none;
+	}
+	label {
+		padding: 1rem 5rem;
+		font-size: 1.5rem;
+		margin-top: -0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.skin-lesion-detection p {
+		display: none;
+	}
+	.drag-drop-zone {
+		padding: 0;
+	}
+	.image-preview {
+		padding: 0.25rem;
+	}
+
+	.image-preview img {
+		max-width: 100%;
+		max-height: 200px; /* Adjust as needed */
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	}
+}

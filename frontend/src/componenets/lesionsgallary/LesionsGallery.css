@@ -1,0 +1,80 @@
+:root {
+	--primary-color: #008cef;
+	--secondary-color: #5ab7ff;
+
+	--background-color: #ffffff;
+}
+.lesions-gallery {
+	width: 80%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(350px, 1fr));
+	gap: 40px;
+	padding: 20px;
+}
+
+.lesion-card {
+	box-shadow: #008cef 0px 0px 10px;
+	border: 1px solid var(--secondary-color);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.lesion-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.lesion-info {
+	padding: 10px;
+}
+
+.lesion-name {
+	font-size: 18px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.lesion-description {
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.gallery-heading {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 20px;
+	margin-top: -20px;
+	color: var(--primary-color);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+	.lesions-gallery {
+		grid-template-columns: repeat(2, minmax(350px, 1fr));
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.lesions-gallery {
+		grid-template-columns: repeat(1, minmax(300px, 1fr));
+	}
+
+	.lesion-image {
+		height: 150px;
+	}
+
+	.lesion-info {
+		padding: 8px;
+	}
+
+	.lesion-name {
+		font-size: 16px;
+		margin-bottom: 8px;
+	}
+
+	.lesion-description {
+		font-size: 12px;
+	}
+}
